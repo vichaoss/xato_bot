@@ -17,18 +17,20 @@ class Settings:
     divisiones = [1, 2, 3, 4, 5]
 
     project_folder_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    command_prefix = 'xato!'
+    command_prefix = 'x!'
 
     # TODO: ponerle nombre al rol de xatAdmin
     admin_role = "XatAdmin"
 
-    sources_folder_name = "res"
+    sources_folder_name = "src"
+    resources_folder_name = "res"
     logs_folder_name = "logs"
     database_file_name = "database.db"
 
-    sources_folder_path = ''
-    logs_folder_path = ''
-    database_file_path = ''
+    sources_folder_path = os.path.join(project_folder_path, sources_folder_name)
+    resources_folder_path = os.path.join(project_folder_path, resources_folder_name)
+    logs_folder_path = os.path.join(project_folder_path, logs_folder_name)
+    database_file_path = os.path.join(resources_folder_path, database_file_name)
 
     server_id = servers["Wholesomness"]
     channel_id = channels["Wholesomness"]
@@ -39,20 +41,15 @@ class Settings:
 
     @staticmethod
     def startup(test=False):
-        Settings.sources_folder_path = os.path.join(Settings.project_folder_path, Settings.sources_folder_name)
-        Settings.logs_folder_path = os.path.join(Settings.project_folder_path, Settings.logs_folder_name)
         if test is True:
             Settings.server_id = Settings.servers["Servidor de pruebas"]
             Settings.channel_id = Settings.channels["Servidor de pruebas"]
-            # Settings.token = botTokens.protoToken
             pass
-        Settings.database_file_path = os.path.join(Settings.sources_folder_path, Settings.database_file_name)
         try:
-            os.makedirs(Settings.sources_folder_path)
+            os.makedirs(Settings.resources_folder_path)
         except FileExistsError:
             pass
         open(Settings.database_file_path, "a").close()
-        # DbConnector.startup()
         return
 
     pass

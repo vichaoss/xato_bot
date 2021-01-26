@@ -4,7 +4,6 @@
 
 # noinspection PyPackageRequirements
 import discord
-# noinspection PyPackageRequirements
 from configs.dbConnector import DbConnector
 from configs.settings import Settings
 

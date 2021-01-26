@@ -1,14 +1,19 @@
+
 # Ide directories
-/.git/
-/.idea/
-/.vscode/
-# venv's
+**/.git/
+**/.idea/
+**/.vscode/
+
+# Venv's
 /venvDiscordBot/
 /venv/
 /venvs/
-*/__pycache__/
-# bos's logs
+
+# Caches
+**/__pycache__/
 /logs/
-# credentials
+
+# Credentials
 /src/configs/botTokens.py
 *.db
+*.tmp

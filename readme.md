@@ -4,10 +4,13 @@ Es un bot de discord desarrollado para gestionar la xatos league.
 
 ## Errores conocidos
 
-*
+* Posible error al promocionar un Challenger o al bajar un Bronce 5, posible perdida de liga
 
 ## Funciones por añadir
 
+* Rango unranked
+* Comando para flushear la tabla
+* Servio para windows
 *
 
 ## Comandos soportados
@@ -38,7 +41,7 @@ Se considerará la version 1.0.0.0 como la inicial, con el bot _estable_ siguien
 - D: Cambios menores.
 
 * 1.3.0.0
-  * Implementados tabla de liderazgo, promocion, decenso y registro.
+  * Implementados tabla de liderazgo, promoción, descenso y registro.
 
 * 1.0.0.0
   * Primera version _estable_, capaz conectarse y crear su base de datos vacía.
