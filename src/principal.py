@@ -8,7 +8,7 @@ from configs.dbConnector import DbConnector
 from configs.settings import Settings
 
 Settings.VERSION = "1.3.0.0"
-Settings.startup(test=False)
+Settings.startup(test=True)
 DbConnector.startup()
 client = discord.Client()
 
