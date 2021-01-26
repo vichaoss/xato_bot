@@ -11,6 +11,10 @@ class Settings:
     VERSION = None
     servers = {"Wholesomness": 454838012908535808,
                "Servidor de pruebas": 760614553636962304}
+    channels = {"Wholesomness": 801645015554195476,
+                "Servidor de pruebas": 803265688076156988}
+    ligas = ["Bronce", "Plata", "Oro", "Platino", "Diamante", "Challenger"]
+    divisiones = [1, 2, 3, 4, 5]
 
     project_folder_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     command_prefix = 'xato!'
@@ -27,6 +31,7 @@ class Settings:
     database_file_path = ''
 
     server_id = servers["Wholesomness"]
+    channel_id = channels["Wholesomness"]
 
     token = botTokens.token_xato_bot
 
@@ -38,7 +43,8 @@ class Settings:
         Settings.logs_folder_path = os.path.join(Settings.project_folder_path, Settings.logs_folder_name)
         if test is True:
             Settings.server_id = Settings.servers["Servidor de pruebas"]
-            Settings.token = botTokens.protoToken
+            Settings.channel_id = Settings.channels["Servidor de pruebas"]
+            # Settings.token = botTokens.protoToken
             pass
         Settings.database_file_path = os.path.join(Settings.sources_folder_path, Settings.database_file_name)
         try:
